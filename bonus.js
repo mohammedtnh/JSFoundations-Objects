@@ -8,7 +8,9 @@ const channels = require("./channels.json");
  * BONUS: use iteration method `.reduce()`
  ****************************************************************/
 function totalVideosDuration(channel) {
-  // Your code here
+  const reducer = (sum, val) => sum + val;
+  const initialValue = 0;
+  return channel.videos.durations.reduce(reducer, initialValue);
 }
 
 /**************************************************************
